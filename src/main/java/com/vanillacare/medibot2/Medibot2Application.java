@@ -1,6 +1,7 @@
 package com.vanillacare.medibot2;
 
 import com.vanillacare.medibot2.controller.PatientController;
+import com.vanillacare.medibot2.dto.PatientCreateRequest;
 import com.vanillacare.medibot2.dto.PatientDto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,8 +17,7 @@ public class Medibot2Application {
         var patientController = context.getBean(PatientController.class);
 
         patientController.createPatient(
-                new PatientDto(
-                        "vanillasky",
+                new PatientCreateRequest(
                         "vanillasky",
                         "12345",
                         "1989/12/13",
@@ -25,6 +25,8 @@ public class Medibot2Application {
                         "test"
                 )
         );
+
+
 
     }
 

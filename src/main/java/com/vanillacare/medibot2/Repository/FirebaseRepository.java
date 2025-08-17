@@ -7,7 +7,6 @@ import com.google.cloud.firestore.SetOptions;
 import com.vanillacare.medibot2.dto.PatientDto;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -23,7 +22,7 @@ public class FirebaseRepository implements PatientRepository{
     }
 
     @Override
-    public void registerPatient(PatientDto dto) {
+    public void createPatient(PatientDto dto) {
         // define the collection name
         String collection = "patients";
 
